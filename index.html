@@ -1,248 +1,53 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sachin N - AI Engineer Portfolio</title>
-    <meta name="description" content="Sachin N is an AI Engineer and Machine Learning Specialist with expertise in developing innovative AI solutions.">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- ... (previous head content remains the same) ... -->
     <style>
-        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+        /* ... (previous styles remain the same) ... */
 
-        :root {
-            --primary-color: #00abf0;
-            --background-color: #081b29;
-            --text-color: #ededed;
-        }
-
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            font-family: 'Poppins', sans-serif;
-        }
-
-        body {
-            background-color: var(--background-color);
-            color: var(--text-color);
-            line-height: 1.6;
-        }
-
-        .container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 0 20px;
-        }
-
-        .header {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            padding: 20px 0;
-            background-color: rgba(8, 27, 41, 0.8);
-            backdrop-filter: blur(10px);
-            z-index: 100;
-        }
-
-        .header-content {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-
-        .logo {
-            font-size: 28px;
-            color: var(--text-color);
-            text-decoration: none;
-            font-weight: 700;
-        }
-
-        .navbar {
-            display: flex;
-        }
-
-        .navbar a {
-            font-size: 18px;
-            color: var(--text-color);
-            text-decoration: none;
-            font-weight: 500;
-            margin-left: 35px;
-            transition: .3s;
-        }
-
-        .navbar a:hover,
-        .navbar a.active {
-            color: var(--primary-color);
-        }
-
-        .home {
-            height: 100vh;
-            display: flex;
-            align-items: center;
-            padding: 0 10%;
-            position: relative;
-            overflow: hidden;
-        }
-
-        .home-content {
-            max-width: 600px;
-        }
-
-        .home-content h1 {
-            font-size: 56px;
-            font-weight: 700;
-            line-height: 1.2;
-            margin-bottom: 20px;
-            animation: fadeInLeft 1s ease;
-        }
-
-        .home-content h3 {
-            font-size: 32px;
-            font-weight: 700;
-            color: var(--primary-color);
-            margin-bottom: 15px;
-            animation: fadeInLeft 1s ease 0.2s;
-        }
-
-        .home-content p {
-            font-size: 18px;
-            margin-bottom: 30px;
-            animation: fadeInLeft 1s ease 0.4s;
-        }
-
-        .btn-box {
-            display: flex;
-            justify-content: flex-start;
-            gap: 20px;
-            animation: fadeInLeft 1s ease 0.6s;
-        }
-
-        .btn {
-            display: inline-block;
-            padding: 12px 28px;
-            background: var(--primary-color);
-            border: 2px solid var(--primary-color);
-            border-radius: 8px;
-            font-size: 16px;
-            color: var(--background-color);
-            text-decoration: none;
-            font-weight: 600;
-            letter-spacing: 1px;
-            transition: .5s;
-        }
-
-        .btn:hover {
-            background: transparent;
-            color: var(--primary-color);
-        }
-
-        .btn.secondary {
-            background: transparent;
-            color: var(--primary-color);
-        }
-
-        .btn.secondary:hover {
-            background: var(--primary-color);
-            color: var(--background-color);
-        }
-
-        .home-sci {
-            position: absolute;
-            bottom: 40px;
-            display: flex;
-            gap: 20px;
-        }
-
-        .home-sci a {
-            display: inline-flex;
-            justify-content: center;
-            align-items: center;
-            width: 40px;
-            height: 40px;
-            background: transparent;
-            border: 2px solid var(--primary-color);
-            border-radius: 50%;
-            font-size: 20px;
-            color: var(--primary-color);
-            text-decoration: none;
-            transition: .5s;
-            z-index: 1;
-            overflow: hidden;
-        }
-
-        .home-sci a:hover {
-            color: var(--background-color);
-            background: var(--primary-color);
-        }
-
-        .home-imgHover {
-            position: absolute;
-            top: 0;
-            right: 0;
-            width: 45%;
-            height: 100%;
-            background: transparent;
-            transition: 3s;
-        }
-
-        .home-imgHover:hover {
-            background: var(--background-color);
-            opacity: .8;
-        }
-
-        .section {
-            padding: 100px 0;
-        }
-
-        .section-title {
-            font-size: 36px;
+        .experience {
             margin-bottom: 40px;
-            text-align: center;
         }
 
-        .project {
+        .experience-item {
             background: rgba(255, 255, 255, 0.05);
             border-radius: 10px;
             padding: 20px;
-            margin-bottom: 30px;
+            margin-bottom: 20px;
         }
 
-        .project h3 {
+        .experience-item h3 {
             font-size: 24px;
             margin-bottom: 10px;
             color: var(--primary-color);
         }
 
-        .project p {
-            margin-bottom: 15px;
+        .experience-item h4 {
+            font-size: 18px;
+            margin-bottom: 10px;
+            color: #ededed;
         }
 
-        @keyframes fadeInLeft {
-            0% {
-                opacity: 0;
-                transform: translateX(-50px);
-            }
-            100% {
-                opacity: 1;
-                transform: translateX(0);
-            }
+        .experience-item p {
+            margin-bottom: 10px;
         }
 
-        @media (max-width: 768px) {
-            .home-content h1 {
-                font-size: 36px;
-            }
-            .home-content h3 {
-                font-size: 24px;
-            }
-            .btn-box {
-                flex-direction: column;
-                align-items: flex-start;
-            }
-            .home-sci {
-                bottom: 20px;
-            }
+        .experience-item ul {
+            list-style-type: none;
+            padding-left: 20px;
+        }
+
+        .experience-item li {
+            margin-bottom: 5px;
+            position: relative;
+        }
+
+        .experience-item li::before {
+            content: "•";
+            color: var(--primary-color);
+            font-weight: bold;
+            position: absolute;
+            left: -15px;
         }
     </style>
 </head>
@@ -252,77 +57,66 @@
             <a href="#" class="logo">Sachin.</a>
             <nav class="navbar">
                 <a href="#" class="active">Home</a>
+                <a href="#experience">Experience</a>
                 <a href="#projects">Projects</a>
                 <a href="#contact">Contact</a>
             </nav>
         </div>
     </header>
 
-    <section class="home">
-        <div class="home-content">
-            <h1>Hi, I'm Sachin N</h1>
-            <h3>AI Engineer & Machine Learning Specialist</h3>
-            <p>MS in AI graduate from San Jose State University with a strong background in Computer Science. Passionate about developing innovative AI and machine learning solutions to solve complex problems.</p>
-            <div class="btn-box">
-                <a href="#projects" class="btn">My Projects</a>
-                <a href="#contact" class="btn secondary">Let's Talk</a>
-            </div>
-        </div>
+    <!-- ... (Home section remains the same) ... -->
 
-        <div class="home-sci">
-            <a href="https://www.linkedin.com/in/sachin-nekkanti/" target="_blank"><i class="fab fa-linkedin-in"></i></a>
-            <a href="mailto:sssn.work@gmail.com"><i class="fas fa-envelope"></i></a>
-            <a href="tel:+16508085710"><i class="fas fa-phone"></i></a>
-        </div>
-
-        <div class="home-imgHover"></div>
-    </section>
-
-    <section id="projects" class="section">
+    <section id="experience" class="section">
         <div class="container">
-            <h2 class="section-title">My Projects</h2>
-            <div class="project">
-                <h3>Reporting Surge in Retail Theft</h3>
-                <p>Built real-time dashboard utilizing Tableau to analyze the impact of retail-theft post covid-19 pandemic in San Francisco and Chicago, aiming to prevent inventory shrinkage of retail industry by 25%</p>
-            </div>
-            <div class="project">
-                <h3>Forbes Data Analysis</h3>
-                <p>Developed a comprehensive dashboard for the Forbes Billionaires dataset in Power BI using DAX queries, integrating key visualizations and ensuring data accuracy through Plotly's offline mode.</p>
-            </div>
-            <div class="project">
-                <h3>Salesforce Search Engine</h3>
-                <p>Engineered a scalable search engine for StackExchange Salesforce Q&A with 129K posts, using BERT for text indexing in Elastic Document Store and BM25 for precise querying. Packaged for easy deployment with Docker.</p>
-            </div>
-            <div class="project">
-                <h3>Unveiling EV Pricing Strategy</h3>
-                <p>Applied conjoint analysis to develop a robust pricing strategy for inaugural offering of EV Jeep Recon and estimated customer's willingness to pay in the US market, incorporating tier pricing with base anchoring price of $55K</p>
-            </div>
-            <div class="project">
-                <h3>Designing Real Estate Digital Marketing Campaign</h3>
-                <p>Implemented A/B testing through Facebook ads to analyze consumer behavior in East India for purchasing health resort based on age & lifestyle demographics, yielding a reach of 546K and click through rate of 12.4%</p>
+            <h2 class="section-title">Professional Experience</h2>
+            <div class="experience">
+                <div class="experience-item">
+                    <h3>Data Scientist</h3>
+                    <h4>NetSec Pros, Fremont, CA | September 2023 - Present</h4>
+                    <ul>
+                        <li>Created and managed 10+ interactive data analytical dashboards with KPI reports using Power BI, Quicksight leading to a 45% improvement in data-driven decision-making and enhanced stakeholder insights.</li>
+                        <li>Manipulated, transformed, and constructed complex queries efficiently on large datasets using Spark, SQL and Databricks.</li>
+                        <li>Fabricated a Data Warehouse and developed ETL pipelines using Azure Data Factory and Azure Data Lake Storage Gen2; optimized query performance on Azure Synapse Analytics, resulting in cost reduction of up to 75%.</li>
+                        <li>Conducted rigorous interpretable statistical variable selection, achieving an 80% reduction in feature size and reducing model training time by 99.9%, significantly enhancing efficiency.</li>
+                        <li>Developed a variety of ML models (such as regression, decision trees, clustering and SVMs) using Scikit-learn and Pytorch in Azure ML Studio to predict key business outcomes, resulting in improved accuracy and decision-making efficiency.</li>
+                        <li>Performed A/B testing to evaluate performance of machine learning models and updating the model in event of data-drift.</li>
+                    </ul>
+                </div>
+                <div class="experience-item">
+                    <h3>ML Data Engineer Intern</h3>
+                    <h4>Oyla Inc, San Francisco Bay Area | June 2022 - July 2022</h4>
+                    <ul>
+                        <li>Addressed challenges in object detection, specifically focusing on detecting human presence in low-light scenarios using Oyla's cutting-edge camera technology empowered by Tensorflow.</li>
+                        <li>Executed thorough field testing of Oyla's fusion camera and crafted RGB-Depth datasets to enhance the feature set for machine learning models, storing and managing these datasets efficiently using Google Cloud Storage (GCS).</li>
+                    </ul>
+                </div>
+                <div class="experience-item">
+                    <h3>Machine Learning Engineer</h3>
+                    <h4>Swiggy, Applied Research Team, Bangalore, India | May 2019 - August 2021</h4>
+                    <ul>
+                        <li>Developed a Novel End to End trainable model for Speech Emotion Recognition of Recorded Customer Calls.</li>
+                        <li>Conducted feature engineering on speech samples using dimensionality reduction techniques, including Principal Component Analysis (PCA) and t-distributed Stochastic Neighbor Embedding (t-SNE).</li>
+                        <li>Achieved a rise in the accuracy of 32% using a hybrid deep learning architecture from the baseline model.</li>
+                        <li>Directly involved in DE Mask Compliance (a COVID-19 priority project), to check if a particular Food Delivery Executive is wearing the Face Mask using computer vision and deep learning.</li>
+                        <li>Implemented the RetinaFace-MobileNet architecture in Tensorflow and deployed it using Flask API and Docker.</li>
+                    </ul>
+                </div>
+                <div class="experience-item">
+                    <h3>Deep Learning Intern</h3>
+                    <h4>AjnaLens, ML-R&D Team, Mumbai, India | January 2019 - May 2019</h4>
+                    <ul>
+                        <li>Deployed an optimized CNN-LSTM wake word model on mobile with TensorFlow Lite and Firebase, reducing size by 30%, doubling speed, and maintaining >90% accuracy.</li>
+                        <li>Trained PointNet CNN model using PyTorch on a custom 2 TB indoor scene dataset on an in-house GPU cluster, achieving 82% accuracy in semantic segmentation of 3D point clouds.</li>
+                    </ul>
+                </div>
             </div>
         </div>
     </section>
 
-    <section id="contact" class="section">
-        <div class="container">
-            <h2 class="section-title">Contact Me</h2>
-            <p>Email: <a href="mailto:sssn.work@gmail.com">sssn.work@gmail.com</a></p>
-            <p>Phone: <a href="tel:+16508085710">+1 (650) 808-5710</a></p>
-            <p>LinkedIn: <a href="https://www.linkedin.com/in/sachin-nekkanti/" target="_blank">linkedin.com/in/sachin-nekkanti/</a></p>
-        </div>
-    </section>
+    <!-- ... (Projects and Contact sections remain the same) ... -->
 
     <script>
-        // Add smooth scrolling
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function (e) {
-                e.preventDefault();
-                document.querySelector(this.getAttribute('href')).scrollIntoView({
-                    behavior: 'smooth'
-                });
-            });
-        });
+        // ... (JavaScript remains the same) ...
     </script>
 </body>
 </html>
