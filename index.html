@@ -2,12 +2,18 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sachin N - AI Engineer Portfolio</title>
+    <meta name="description" content="Sachin N is an AI Engineer and Machine Learning Specialist with expertise in developing innovative AI solutions.">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
-        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+        :root {
+            --primary-color: #00abf0;
+            --background-color: #081b29;
+            --text-color: #ededed;
+        }
 
         * {
             margin: 0;
@@ -17,8 +23,15 @@
         }
 
         body {
-            background-color: #081b29;
-            color: #ededed;
+            background-color: var(--background-color);
+            color: var(--text-color);
+            line-height: 1.6;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
         }
 
         .header {
@@ -26,24 +39,32 @@
             top: 0;
             left: 0;
             width: 100%;
-            padding: 20px 10%;
-            background-color: transparent;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
+            padding: 20px 0;
+            background-color: rgba(8, 27, 41, 0.8);
+            backdrop-filter: blur(10px);
             z-index: 100;
         }
 
+        .header-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
         .logo {
-            font-size: 25px;
-            color: #ededed;
+            font-size: 28px;
+            color: var(--text-color);
             text-decoration: none;
-            font-weight: 600;
+            font-weight: 700;
+        }
+
+        .navbar {
+            display: flex;
         }
 
         .navbar a {
             font-size: 18px;
-            color: #ededed;
+            color: var(--text-color);
             text-decoration: none;
             font-weight: 500;
             margin-left: 35px;
@@ -52,7 +73,7 @@
 
         .navbar a:hover,
         .navbar a.active {
-            color: #00abf0;
+            color: var(--primary-color);
         }
 
         .home {
@@ -60,6 +81,8 @@
             display: flex;
             align-items: center;
             padding: 0 10%;
+            position: relative;
+            overflow: hidden;
         }
 
         .home-content {
@@ -70,123 +93,87 @@
             font-size: 56px;
             font-weight: 700;
             line-height: 1.2;
+            margin-bottom: 20px;
+            animation: fadeInLeft 1s ease;
         }
 
         .home-content h3 {
             font-size: 32px;
             font-weight: 700;
-            color: #00abf0;
+            color: var(--primary-color);
+            margin-bottom: 15px;
+            animation: fadeInLeft 1s ease 0.2s;
         }
 
         .home-content p {
-            font-size: 16px;
-            margin: 20px 0 40px;
+            font-size: 18px;
+            margin-bottom: 30px;
+            animation: fadeInLeft 1s ease 0.4s;
         }
 
-        .home-content .btn-box {
+        .btn-box {
             display: flex;
-            justify-content: space-between;
-            width: 345px;
-            height: 50px;
+            justify-content: flex-start;
+            gap: 20px;
+            animation: fadeInLeft 1s ease 0.6s;
         }
 
-        .btn-box a {
-            position: relative;
-            display: inline-flex;
-            justify-content: center;
-            align-items: center;
-            width: 150px;
-            height: 100%;
-            background: #00abf0;
-            border: 2px solid #00abf0;
+        .btn {
+            display: inline-block;
+            padding: 12px 28px;
+            background: var(--primary-color);
+            border: 2px solid var(--primary-color);
             border-radius: 8px;
-            font-size: 19px;
-            color: #081b29;
+            font-size: 16px;
+            color: var(--background-color);
             text-decoration: none;
             font-weight: 600;
             letter-spacing: 1px;
-            z-index: 1;
-            overflow: hidden;
             transition: .5s;
         }
 
-        .btn-box a:hover {
-            color: #00abf0;
-        }
-
-        .btn-box a:nth-child(2) {
+        .btn:hover {
             background: transparent;
-            color: #00abf0;
+            color: var(--primary-color);
         }
 
-        .btn-box a:nth-child(2):hover {
-            color: #081b29;
+        .btn.secondary {
+            background: transparent;
+            color: var(--primary-color);
         }
 
-        .btn-box a:nth-child(2)::before {
-            background: #00abf0;
-        }
-
-        .btn-box a::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 0;
-            height: 100%;
-            background: #081b29;
-            z-index: -1;
-            transition: .5s;
-        }
-
-        .btn-box a:hover::before {
-            width: 100%;
+        .btn.secondary:hover {
+            background: var(--primary-color);
+            color: var(--background-color);
         }
 
         .home-sci {
             position: absolute;
             bottom: 40px;
-            width: 170px;
             display: flex;
-            justify-content: space-between;
+            gap: 20px;
         }
 
         .home-sci a {
-            position: relative;
             display: inline-flex;
             justify-content: center;
             align-items: center;
             width: 40px;
             height: 40px;
             background: transparent;
-            border: 2px solid #00abf0;
+            border: 2px solid var(--primary-color);
             border-radius: 50%;
             font-size: 20px;
-            color: #00abf0;
+            color: var(--primary-color);
             text-decoration: none;
+            transition: .5s;
             z-index: 1;
             overflow: hidden;
-            transition: .5s;
         }
 
         .home-sci a:hover {
-            color: #081b29;
-        }
-
-        .home-sci a::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 0;
-            height: 100%;
-            background: #00abf0;
-            z-index: -1;
-            transition: .5s;
-        }
-
-        .home-sci a:hover::before {
-            width: 100%;
+            color: var(--background-color);
+            background: var(--primary-color);
         }
 
         .home-imgHover {
@@ -200,31 +187,59 @@
         }
 
         .home-imgHover:hover {
-            background: #081b29;
+            background: var(--background-color);
             opacity: .8;
+        }
+
+        @keyframes fadeInLeft {
+            0% {
+                opacity: 0;
+                transform: translateX(-50px);
+            }
+            100% {
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
+
+        @media (max-width: 768px) {
+            .home-content h1 {
+                font-size: 36px;
+            }
+            .home-content h3 {
+                font-size: 24px;
+            }
+            .btn-box {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+            .home-sci {
+                bottom: 20px;
+            }
         }
     </style>
 </head>
 <body>
     <header class="header">
-        <a href="#" class="logo">Sachin.</a>
-
-        <nav class="navbar">
-            <a href="#" class="active">Home</a>
-            <a href="#about">About</a>
-            <a href="#projects">Projects</a>
-            <a href="#contact">Contact</a>
-        </nav>
+        <div class="container header-content">
+            <a href="#" class="logo">Sachin.</a>
+            <nav class="navbar">
+                <a href="#" class="active">Home</a>
+                <a href="#about">About</a>
+                <a href="#projects">Projects</a>
+                <a href="#contact">Contact</a>
+            </nav>
+        </div>
     </header>
 
     <section class="home">
         <div class="home-content">
             <h1>Hi, I'm Sachin N</h1>
             <h3>AI Engineer & Machine Learning Specialist</h3>
-            <p>MS in AI graduate from San Jose State University with a strong background in Computer Science. Passionate about developing innovative AI and machine learning solutions.</p>
+            <p>MS in AI graduate from San Jose State University with a strong background in Computer Science. Passionate about developing innovative AI and machine learning solutions to solve complex problems.</p>
             <div class="btn-box">
-                <a href="#projects">My Projects</a>
-                <a href="#contact">Let's Talk</a>
+                <a href="#projects" class="btn">My Projects</a>
+                <a href="#contact" class="btn secondary">Let's Talk</a>
             </div>
         </div>
 
@@ -234,11 +249,19 @@
             <a href="#"><i class="fas fa-envelope"></i></a>
         </div>
 
-        <span class="home-imgHover"></span>
+        <div class="home-imgHover"></div>
     </section>
 
     <script>
-        // Add any JavaScript functionality here
+        // Add smooth scrolling
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
     </script>
 </body>
 </html>
