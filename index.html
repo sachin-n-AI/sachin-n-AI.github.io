@@ -191,6 +191,33 @@
             opacity: .8;
         }
 
+        .section {
+            padding: 100px 0;
+        }
+
+        .section-title {
+            font-size: 36px;
+            margin-bottom: 40px;
+            text-align: center;
+        }
+
+        .project {
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 10px;
+            padding: 20px;
+            margin-bottom: 30px;
+        }
+
+        .project h3 {
+            font-size: 24px;
+            margin-bottom: 10px;
+            color: var(--primary-color);
+        }
+
+        .project p {
+            margin-bottom: 15px;
+        }
+
         @keyframes fadeInLeft {
             0% {
                 opacity: 0;
@@ -225,7 +252,6 @@
             <a href="#" class="logo">Sachin.</a>
             <nav class="navbar">
                 <a href="#" class="active">Home</a>
-                <a href="#about">About</a>
                 <a href="#projects">Projects</a>
                 <a href="#contact">Contact</a>
             </nav>
@@ -244,12 +270,47 @@
         </div>
 
         <div class="home-sci">
-            <a href="#"><i class="fab fa-linkedin-in"></i></a>
-            <a href="#"><i class="fab fa-github"></i></a>
-            <a href="#"><i class="fas fa-envelope"></i></a>
+            <a href="https://www.linkedin.com/in/sachin-nekkanti/" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+            <a href="mailto:sssn.work@gmail.com"><i class="fas fa-envelope"></i></a>
+            <a href="tel:+16508085710"><i class="fas fa-phone"></i></a>
         </div>
 
         <div class="home-imgHover"></div>
+    </section>
+
+    <section id="projects" class="section">
+        <div class="container">
+            <h2 class="section-title">My Projects</h2>
+            <div class="project">
+                <h3>Reporting Surge in Retail Theft</h3>
+                <p>Built real-time dashboard utilizing Tableau to analyze the impact of retail-theft post covid-19 pandemic in San Francisco and Chicago, aiming to prevent inventory shrinkage of retail industry by 25%</p>
+            </div>
+            <div class="project">
+                <h3>Forbes Data Analysis</h3>
+                <p>Developed a comprehensive dashboard for the Forbes Billionaires dataset in Power BI using DAX queries, integrating key visualizations and ensuring data accuracy through Plotly's offline mode.</p>
+            </div>
+            <div class="project">
+                <h3>Salesforce Search Engine</h3>
+                <p>Engineered a scalable search engine for StackExchange Salesforce Q&A with 129K posts, using BERT for text indexing in Elastic Document Store and BM25 for precise querying. Packaged for easy deployment with Docker.</p>
+            </div>
+            <div class="project">
+                <h3>Unveiling EV Pricing Strategy</h3>
+                <p>Applied conjoint analysis to develop a robust pricing strategy for inaugural offering of EV Jeep Recon and estimated customer's willingness to pay in the US market, incorporating tier pricing with base anchoring price of $55K</p>
+            </div>
+            <div class="project">
+                <h3>Designing Real Estate Digital Marketing Campaign</h3>
+                <p>Implemented A/B testing through Facebook ads to analyze consumer behavior in East India for purchasing health resort based on age & lifestyle demographics, yielding a reach of 546K and click through rate of 12.4%</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="section">
+        <div class="container">
+            <h2 class="section-title">Contact Me</h2>
+            <p>Email: <a href="mailto:sssn.work@gmail.com">sssn.work@gmail.com</a></p>
+            <p>Phone: <a href="tel:+16508085710">+1 (650) 808-5710</a></p>
+            <p>LinkedIn: <a href="https://www.linkedin.com/in/sachin-nekkanti/" target="_blank">linkedin.com/in/sachin-nekkanti/</a></p>
+        </div>
     </section>
 
     <script>
